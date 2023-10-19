@@ -8,7 +8,7 @@ pipeline {
         stage('GIT') {
             steps {
                 echo "Getting Project from Git"
-                git branch: 'rania-amri-5sleam1', url: 'https://github.com/jihedMo/achat.git'
+                git branch: 'Hamza-Sbaii-5SE2', url: 'https://github.com/hamzasbaii/KADDEM/tree/Hamza-Sbaii-5SE2'
             }
         }
         stage('Clean') {
@@ -24,7 +24,7 @@ pipeline {
                 }
             }
         }
-      stage('SonarQube analysis') {
+     /* stage('SonarQube analysis') {
                  steps {
                      script {
                          def scannerHome = tool 'sonarqube';
@@ -33,6 +33,6 @@ pipeline {
                          }
                      }
                  }
-             }
+             }*/
          }
      }
