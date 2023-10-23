@@ -1,38 +1,26 @@
-pipeline {
+pipeline{
     agent any
-    environment {
-        PATH = "/opt/maven/bin:$PATH"
-        JAVA_HOME = "/usr/lib/jvm/java-1.11.0-openjdk-amd64"
-    }
     stages {
-        stage('GIT') {
+        stage("Testing Maven"){
             steps {
-                echo "Getting Project from Git"
-                git branch: 'Hamza-Sbaii-5SE2', url: 'https://github.com/hamzasbaii/KADDEM/tree/Hamza-Sbaii-5SE2'
+                sh "mvn -version"
             }
         }
-        stage('Clean') {
+        stage("Testing JDK"){
             steps {
-                sh 'mvn clean '
+                sh "java -version"
             }
         }
-        stage('Compile') {
+        stage("Chekout Git"){
             steps {
-                script {
-                    def mavenHome = sh(returnStdout: true, script: 'echo $M2_HOME').trim()
-                    sh "${mavenHome}/bin/mvn compile -DskipTests"
-                }
+                echo "Pulling"
             }
         }
-     /* stage('SonarQube analysis') {
-                 steps {
-                     script {
-                         def scannerHome = tool 'sonarqube';
-                         withSonarQubeEnv('SonarQube') {
-                             sh "${scannerHome}/bin/sonar-scanner"
-                         }
-                     }
-                 }
-             }*/
-         }
-     }
+        stage('MVN COMPILE') {
+            steps{
+                sh 'mvn compile'
+        }
+}
+
+    }
+}
