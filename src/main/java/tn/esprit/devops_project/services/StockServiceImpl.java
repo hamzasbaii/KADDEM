@@ -8,6 +8,7 @@ import tn.esprit.devops_project.repositories.StockRepository;
 
 import java.util.List;
 
+
 @Service
 @AllArgsConstructor
 public class StockServiceImpl implements IStockService {
@@ -15,9 +16,21 @@ public class StockServiceImpl implements IStockService {
    private final StockRepository stockRepository;
 
     @Override
+    public int deleteStock(Long stockId) {
+
+        stockRepository.deleteById(stockId);
+        if(stockRepository.findById(stockId)==null){
+            return 1;
+        }
+        return 0;
+    }
+
+    @Override
     public Stock addStock(Stock stock) {
         return stockRepository.save(stock);
     }
+
+
 
     @Override
     public Stock retrieveStock(Long id) {
