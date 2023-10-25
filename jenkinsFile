@@ -14,6 +14,9 @@ pipeline{
         stage("Chekout Git"){
             steps {
                 echo "Pulling"
+                    git branch: 'AhmedHachani5se2'
+                    url: 'https://github.com/hamzasbaii/KADDEM'
+                    credentialsId: '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'
             }
         }
         stage('MVN COMPILE') {
