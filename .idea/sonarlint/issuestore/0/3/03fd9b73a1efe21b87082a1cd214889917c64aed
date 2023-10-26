@@ -1,7 +1,0 @@
-
-c
-java:S2789"FEnsure this "Optional" could never be null and remove this null-check.(Èï®¦8öêğÎµ1
-a
-java:S2583"DChange this condition so that it does not always evaluate to "false"(Èï®¦8ƒëğÎµ1
-[
-java:S3516"9Refactor this method to not always return the same value.(‰ĞäÀûÿÿÿÿ8ƒëğÎµ1
