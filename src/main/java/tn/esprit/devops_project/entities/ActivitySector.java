@@ -23,6 +23,7 @@ public class ActivitySector  implements Serializable {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         Long idSecteurActivite;
         String codeSecteurActivite;
+
         String libelleSecteurActivite;
         @ManyToMany(mappedBy="activitySectors")
         @JsonIgnore
