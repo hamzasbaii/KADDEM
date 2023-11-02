@@ -15,3 +15,7 @@ j
 :src/main/java/tn/esprit/devops_project/entities/Stock.java,6\f\6fec9ef25b7fb23d12b756f69ebcfb16d31616e8
 y
 Isrc/Test/java/tn/esprit/devops_project/services/StockServiceImplTest.java,4\c\4ccaf977e71ca031618fb3947052de3e9f2b874a
+
+Osrc/main/java/tn/esprit/devops_project/DevOps_ProjectSpringBootApplication.java,0\2\027aafcaca26450fbcb4c4a0a05959b27ce7e555
+s
+Csrc/Test/java/tn/esprit/devops_project/services/StockTestJunit.java,9\2\9281808de7208ea750b49433e17fa9021e70de66
