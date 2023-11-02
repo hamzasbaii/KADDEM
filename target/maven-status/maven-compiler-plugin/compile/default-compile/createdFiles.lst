@@ -4,7 +4,6 @@ tn\esprit\devops_project\controllers\ActivitySectorController.class
 tn\esprit\devops_project\repositories\SupplierRepository.class
 tn\esprit\devops_project\services\StockServiceImpl.class
 tn\esprit\devops_project\controllers\SupplierController.class
-tn\esprit\devops_project\Test\ActivitySectorTest.class
 tn\esprit\devops_project\repositories\InvoiceDetailRepository.class
 tn\esprit\devops_project\services\Iservices\IActivitySector.class
 tn\esprit\devops_project\entities\InvoiceDetail.class

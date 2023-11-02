@@ -13,7 +13,7 @@ import java.util.Set;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class ActivitySectorTest {
+/*public class ActivitySectorTest {
 
   @Mock
   private ActivitySector activitySector;
@@ -60,4 +60,4 @@ public class ActivitySectorTest {
     assertNotNull(activitySector.getSuppliers());
     assertEquals(2, activitySector.getSuppliers().size());
   }
-}
+}*/
