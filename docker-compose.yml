@@ -11,7 +11,7 @@ services:
       MYSQL_DATABASE: devops
       MYSQL_ALLOW_EMPTY_PASSWORD: "1"
     volumes:
-      - mysqldb:/var/lib/mysql:rw
+      - mysqldb:/var/lib/mysql
 
   springapp:
     image: mohamednakbi/kaddem:2.4
