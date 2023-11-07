@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 version: "4"
+=======
+version: "3.9"
+>>>>>>> 0bba68d99a1eeda2c7cbde18c5de22188749a822
 
 services:
   mysqldb:
@@ -24,4 +28,12 @@ services:
     ports:
       - "8089:8089"
     depends_on:
+<<<<<<< HEAD
       - mysqldb
+=======
+      - mysqldb
+
+
+  
+  
+>>>>>>> 0bba68d99a1eeda2c7cbde18c5de22188749a822
