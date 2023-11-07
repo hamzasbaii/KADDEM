@@ -14,7 +14,7 @@ services:
       - mysqldb:/var/lib/mysql
 
   springapp:
-    image: mohamednakbi/kaddem:2.4
+    image: mohamednakbi/kaddem:2.4.1
     container_name: springapp
     restart: on-failure
     environment:
