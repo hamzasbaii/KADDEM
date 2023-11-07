@@ -6,6 +6,7 @@ services:
     container_name: db
     restart: unless-stopped
     environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "1" # Changed to correct YAML format
       MYSQL_DATABASE: devops
     ports:
       - "3308:3306"
