@@ -19,3 +19,8 @@ Isrc/Test/java/tn/esprit/devops_project/services/StockServiceImplTest.java,4\c\
 Osrc/main/java/tn/esprit/devops_project/DevOps_ProjectSpringBootApplication.java,0\2\027aafcaca26450fbcb4c4a0a05959b27ce7e555
 s
 Csrc/Test/java/tn/esprit/devops_project/services/StockTestJunit.java,9\2\9281808de7208ea750b49433e17fa9021e70de66
+B
+docker-compose.yml,3\5\35b8c13cf2eb2a194eada000eb310d65aed53b2a
+:
+
+Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
