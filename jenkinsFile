@@ -35,13 +35,13 @@ stage('MVN SONARQUBE') {
 }*/
 stage('Docker Image ') {
             steps{
-                sh 'docker build -t hamzasbaii/devops-project-1.0 .'
+                sh 'docker build -t hamzasbaii/devops-project-2.1 .'
         }
 }
     stage('Docker HUB') {
             steps{
                 sh 'docker login -u hamzasbaii -p Hamza060200'
-                sh 'docker push hamzasbaii/devops-project-1.0'
+                sh 'docker push hamzasbaii/devops-project-2.1'
         }
 }
     stage('Docker Compose') {

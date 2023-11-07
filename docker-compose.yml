@@ -14,7 +14,7 @@ services:
 
   spring_app:
     container_name: devops
-    image: hamzasbaii/devops-project-1.0
+    image: hamzasbaii/devops-project-2.1:latest
     restart: on-failure
     environment:
       SPRING_DATASOURCE_URL: "jdbc:mysql://mysqldb:3306/devops?createDatabaseIfNotExist=true"
