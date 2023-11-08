@@ -2,7 +2,7 @@ version: "3"
 services:
   app:
     container_name: Kaddem
-    image: sbaiHamza/backend  # Replace with the actual image and tag
+    image: hamzasbaii/devops-project-2.1:latest # Replace with the actual image and tag
     restart: on-failure
     environment:
       SPRING_APPLICATION_JSON: '{
