@@ -30,6 +30,7 @@ public class SupplierServiceImplTest {
         testSupplier.setCode("TestCode");
         testSupplier.setLabel("TestLabel");
         // You can set other properties of the Supplier class here
+        //testing github
     }
 
     @Test
