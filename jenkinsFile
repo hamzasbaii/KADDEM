@@ -28,11 +28,11 @@ stage('MVN SONARQUBE') {
                 sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=sonar'
             }
         }
-    /*  stage('MVN Nexus') {
+      stage('MVN Nexus') {
             steps{
                 sh 'mvn deploy -Dmaven.test.skip=true'
         }
-}*/
+}
 stage('Docker Image ') {
             steps{
                 sh 'docker build -t hamzasbaii/devops-project-2.1 .'
