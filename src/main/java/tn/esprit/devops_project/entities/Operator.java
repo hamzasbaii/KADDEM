@@ -40,4 +40,9 @@ public class Operator implements Serializable{
 	}
 
 
+	public Operator(String fname, String lname) {
+		this.fname = fname;
+		this.lname = lname;
+	}
+
 }

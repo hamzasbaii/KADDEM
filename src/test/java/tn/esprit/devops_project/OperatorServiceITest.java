@@ -7,6 +7,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import tn.esprit.devops_project.entities.Operator;
 import tn.esprit.devops_project.repositories.OperatorRepository;
+import tn.esprit.devops_project.services.OperatorServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,7 @@ import static org.mockito.Mockito.when;
 @Slf4j
 public class OperatorServiceITest {
     @InjectMocks
-    private OperatorServiceITest operatorService;
+    private OperatorServiceImpl operatorService;
 
     @Mock
     private OperatorRepository operatorRepository;
