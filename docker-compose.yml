@@ -3,7 +3,7 @@ version: "3.9"
 services:
   db:
     image: mysql:latest
-    container_name: db
+    container_name: dba
     restart: unless-stopped
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "1" # Changed to correct YAML format
@@ -18,9 +18,9 @@ services:
     container_name: springapp
     restart: on-failure
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/devops?useUnicode=yes&useJDBCCompliantTimezoneShift=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_URL: jdbc:mysql://dba:3306/devops?useUnicode=yes&useJDBCCompliantTimezoneShift=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
     depends_on:
-      - db
+      - dba
 
 volumes:
   db:
