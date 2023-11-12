@@ -55,7 +55,7 @@ sh 'docker-compose up -d'
 }
 
 
-*/
+/*
 stage('Test Services with Swagger') {
 steps {
 echo "Testing services with Swagger"
@@ -87,4 +87,4 @@ echo "Cleaning up"
 }
 }
 }
-/*
+*/
