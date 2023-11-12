@@ -8,10 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58b52e39-0e91-4d3e-88d7-c262a28a69ae" name="Changes" comment="docker">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +68,7 @@
     "last_opened_file_path": "C:/Users/HP/OneDrive/Bureau/DevOps_Project-main/DevOps_Project-main/KADDEM1",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel",
-    "spring.configuration.checksum": "f1fbdc66cc855fb2869624beeb287fc6"
+    "spring.configuration.checksum": "d43225b7e83b8728c20fafc07139b32a"
   }
 }]]></component>
   <component name="RunManager" selected="Spring Boot.DevOps_ProjectSpringBootApplication">
@@ -122,6 +119,7 @@
       <workItem from="1699369817510" duration="140000" />
       <workItem from="1699399478296" duration="3970000" />
       <workItem from="1699477184583" duration="6210000" />
+      <workItem from="1699751029543" duration="2000000" />
     </task>
     <task id="LOCAL-00001" summary="docker">
       <created>1699301619312</created>
@@ -172,7 +170,21 @@
       <option name="project" value="LOCAL" />
       <updated>1699569977257</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="docker">
+      <created>1699751750832</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699751750832</updated>
+    </task>
+    <task id="LOCAL-00009" summary="docker">
+      <created>1699751952610</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699751952610</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
