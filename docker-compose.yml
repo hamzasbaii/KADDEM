@@ -37,7 +37,7 @@ services:
       build: ./DevOps_Project_Front
       restart: on-failure
       ports:
-        - 80:80
+        - 70:80
       networks:
         - mynetwork
 
