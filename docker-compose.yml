@@ -19,7 +19,7 @@ services:
     environment:
       SPRING_DATASOURCE_URL: "jdbc:mysql://mysqldb:3306/devops?createDatabaseIfNotExist=true"
       SPRING_DATASOURCE_USERNAME: "root"
-      SPRING_DATASOURCE_PASSWORD: ""
+      "spring.jpa.hibernate.ddl-auto" : "update"
     volumes:
       - .m2:/root/.m2
     ports:
