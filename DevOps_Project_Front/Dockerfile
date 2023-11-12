@@ -1,4 +1,4 @@
-FROM node:14 AS builder
+FROM node:18.13 AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm install -g @angular/cli
