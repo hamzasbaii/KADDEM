@@ -1,9 +1,10 @@
-FROM node:18 AS builder
+FROM node:14 AS builder
 WORKDIR /app
-COPY package.json ./
+COPY package*.json ./
 RUN npm install -g @angular/cli
 RUN npm install
-RUN ng build
+COPY . .
+RUN ng build --prod
 FROM nginx:alpine
 COPY --from=builder /app/dist/* /usr/share/nginx/html/
 EXPOSE 80
