@@ -2,7 +2,7 @@ version: "3"
 services:
   app:
     container_name: kaddem
-    image: mednakbi/backend  # Replace with the actual image and tag
+    image: mednakbi/backend:new-tag  # Replace with the actual image and tag
     restart: on-failure
     environment:
       SPRING_APPLICATION_JSON: '{
