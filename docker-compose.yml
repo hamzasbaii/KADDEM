@@ -1,26 +1,38 @@
 version: "3.9"
-
 services:
-  db:
+  spring:
+    depends_on: [mysql]
     image: mysql:latest
-    container_name: db
+    container_name: spring
+
     restart: unless-stopped
-    environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: "1" # Changed to correct YAML format
-      MYSQL_DATABASE: devops
     ports:
-      - "3308:3306"
-    volumes:
-      - db:/var/lib/mysql
+      - "8089:8089"
 
-  springapp:
-    image: mohamednakbi/kaddem:2.4
-    container_name: springapp
-    restart: on-failure
+
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/devops?useUnicode=yes&useJDBCCompliantTimezoneShift=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
-    depends_on:
-      - db
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/devops?useUnicode=true&useJDBCCompliantTimezoneShift=true&createDatabaseIfNotExist=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 
+      SPRING_JPA_SHOW_SQL: "true"
+      SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQL5Dialect
+    networks:
+      - my_network
 
-volumes:
-  db:
+  mysql:
+    image: mysql:latest
+    restart: unless-stopped
+    container_name: spring
+    environment:
+      MYSQL_DATABASE: devops
+      MYSQL_ROOT_PASSWORD: 
+      MYSQL_PASSWORD:
+    ports:
+      - "3037:3306"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
