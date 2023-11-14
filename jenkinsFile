@@ -46,7 +46,7 @@ stage('Docker Image ') {
 }
    stage('Run Docker Compose') {
 steps {
-echo sh "docker-compose build"
+             sh "docker-compose build"
               sh "docker-compose up -d"
 }
 }
