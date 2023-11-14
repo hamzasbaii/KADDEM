@@ -1,8 +1,9 @@
-version: "3"
+version: "2.9"
 services:
   app:
-    container_name: kaddem
-    image: mednakbi/backend:new-tag  # Replace with the actual image and tag
+    
+    image: mohamednakbi/kaddem:2.4
+    container_name: springapp
     restart: on-failure
     environment:
       SPRING_APPLICATION_JSON: '{
