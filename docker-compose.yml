@@ -16,11 +16,11 @@ services:
     container_name: devops
     image: hamzasbaii/devops-project-2.1
     restart: on-failure
-       environment:
+    environment:
       SPRING_DATASOURCE_URL: "jdbc:mysql://mysqldb:3306/devops?createDatabaseIfNotExist=true"
       SPRING_DATASOURCE_USERNAME: "root"
-      "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect"
-      "spring.jpa.hibernate.ddl-auto" : "update"
+      "spring.jpa.properties.hibernate.dialect": "org.hibernate.dialect.MySQL5InnoDBDialect"
+      "spring.jpa.hibernate.ddl-auto": "update"
     volumes:
       - .m2:/root/.m2
     ports:
