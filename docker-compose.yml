@@ -12,7 +12,7 @@ services:
     volumes:
       - db:/var/lib/mysql
     networks:
-      - mynetwork
+      - NOTwork
   backend:
     image: backend
     depends_on:
@@ -31,18 +31,18 @@ services:
     volumes:
       - ./m2:/root/.m2
     networks:
-      - mynetwork
+      - NOTwork
   frontend:
     image: frontend
     build: ./DevOps_Project_Front
     restart: on-failure
     ports:
-      - 70:80
+      - 8181:80
     networks:
-      - mynetwork
+      - NOTwork
 
 networks:
-  mynetwork:
+  NOTwork:
     driver: bridge
 
 volumes:
