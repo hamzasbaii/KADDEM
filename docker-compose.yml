@@ -19,7 +19,7 @@ services:
     volumes:
       - app_data:/app/data
 
-  db:
+  mysqldb:
     container_name: db
     image: mysql:latest  # You can use a different version if needed
     environment:
