@@ -1,51 +1,49 @@
 version: "3.8"
 services:
-    mysqldb:
-      image: mysql:5.7
-      restart: unless-stopped
-      environment:
-        - SPRING_DATASOURCE_URL=jdbc:mysql://mysqldb:3306/devops?createDatabaseIfNotExist=true
-        - SPRING_DATASOURCE_USERNAME=root
-        - SPRING_DATASOURCE_PASSWORD=root
-        - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.MySQL5InnoDBDialect
-        - SPRING_JPA_HIBERNATE_DDL_AUTO=update
-      ports:
-        - 3306:3306
-      volumes:
-        - db:/var/lib/mysql
-      networks:
-        - mynetwork
-    backend:
-      image: backend
-      depends_on:
-        - mysqldb
-      build: ./
-      restart: on-failure
-      ports:
-        - 8082:8082
-      environment:
-        SPRING_APPLICATION_JSON: '{
-        "spring.datasource.url=jdbc:mysql://localhost:3306/devops?createDatabaseIfNotExist=true",
-        "spring.datasource.username" : "root",
-        "spring.datasource.password" : "root",
-        "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
-        "spring.jpa.hibernate.ddl-auto" : "update"}'
-      volumes:
-        - ./m2:/root/.m2
-      networks:
-        - mynetwork
-    frontend:
-      image: frontend
-      build: ./DevOps_Project_Front
-      restart: on-failure
-      ports:
-        - 70:80
-      networks:
-        - mynetwork
+  mysqldb:
+    image: mysql:5.7
+    restart: unless-stopped
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysqldb:3306/devops?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.MySQL5InnoDBDialect
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    ports:
+      - 3306:3306
+    volumes:
+      - db:/var/lib/mysql
+    networks:
+      - mynetwork
+
+  backend:
+    image: backend
+    depends_on:
+      - mysqldb
+    build: ./
+    restart: on-failure
+    ports:
+      - 8082:8082
+    environment:
+      SPRING_APPLICATION_JSON: '{"spring.datasource.url": "jdbc:mysql://localhost:3306/devops?createDatabaseIfNotExist=true", "spring.datasource.username": "root", "spring.datasource.password": "root", "spring.jpa.properties.hibernate.dialect": "org.hibernate.dialect.MySQL5InnoDBDialect", "spring.jpa.hibernate.ddl-auto": "update"}'
+    volumes:
+      - ./m2:/root/.m2
+    networks:
+      - mynetwork
+
+  frontend:
+    image: frontend
+    build: ./DevOps_Project_Front
+    restart: on-failure
+    ports:
+      - 70:80
+    networks:
+      - mynetwork
 
 networks:
-    mynetwork:
-      driver: bridge
+  mynetwork:
+    driver: bridge
 
 volumes:
-    db:
+  db:
+
