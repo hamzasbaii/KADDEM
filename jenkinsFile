@@ -21,7 +21,11 @@ pipeline{
                 sh 'mvn compile'
         }
 }
-
+stage("test JUinit"){
+            steps {
+                sh "mvn test"
+            }
+        }
 stage('MVN SONARQUBE') {
             steps{
 
