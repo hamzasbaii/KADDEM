@@ -19,14 +19,20 @@ services:
     volumes:
       - app_data:/app/data
 
-  mysqldb:
-    container_name: mysqldb
-    image: mysql:5.7  # You can use a different version if needed
+  db:
+    container_name: db
+    image: mysql:latest  # You can use a different version if needed
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: 
+      MYSQL_ALLOW_EMPTY_PASSWORD: "1"
       MYSQL_DATABASE: devops
     ports:
-      - "3306:3306"  # Map MySQL's port to the host
+      - "3308:3306"  # Map MySQL's port to the host
+      networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
 
     volumes:
       - db:/var/lib/mysql
