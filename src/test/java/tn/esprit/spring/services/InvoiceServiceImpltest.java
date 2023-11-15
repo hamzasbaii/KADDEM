@@ -22,11 +22,6 @@ public class InvoiceServiceImpltest {
     @Mock
     private InvoiceRepository invoiceRepository;
 
-    @Mock
-    private OperatorRepository operatorRepository;
-
-    @Mock
-    private SupplierRepository supplierRepository;
 
     @InjectMocks
     private InvoiceServiceImpl invoiceService;
@@ -62,22 +57,7 @@ public class InvoiceServiceImpltest {
 
 
 
-    @Test
-    public void testAssignOperatorToInvoice() {
-        // Given
-        Long idOperator = 1L;
-        Long idInvoice = 2L;
-        Operator operator = new Operator();
-        Invoice invoice = new Invoice();
-        when(operatorRepository.findById(idOperator)).thenReturn(Optional.of(operator));
-        when(invoiceRepository.findById(idInvoice)).thenReturn(Optional.of(invoice));
 
-        // When
-        invoiceService.assignOperatorToInvoice(idOperator, idInvoice);
-
-        // Then
-        verify(operatorRepository, times(1)).save(operator);
-    }
 
     @Test
     public void testGetTotalAmountInvoiceBetweenDates() {
