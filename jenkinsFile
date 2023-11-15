@@ -26,6 +26,11 @@ stage("test JUinit"){
                 sh "mvn test"
             }
         }
+stage('JaCoCo Report') {
+            steps {
+                sh 'mvn jacoco:report'
+            }
+        }
 stage('MVN SONARQUBE') {
             steps{
 
