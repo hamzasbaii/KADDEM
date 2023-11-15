@@ -59,10 +59,10 @@ sh 'docker-compose up -d'
 post {
     always {
         emailext(
-                subject: "pipline status: $(BUILD_STATUS}",
+                subject: "Pipline Status: $(BUILD_NUMBER}",
                 body: '''<html>
                             <body>
-                                    <p>Build Status: ${BUILD_STATU}</p>
+                                    <p>Build Status: ${BUILD_STATUS}</p>
                                     <p>Build number: ${BUILD_NUMBER}</p>
                                     <p>Check the<a href="${BUILD_URL}">console output</a>.</p>
                             </body>    
