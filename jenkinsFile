@@ -72,7 +72,7 @@ def dataSourceExists = sh(script: "curl -s -o /dev/null -w '%{http_code}' ${GRAF
 
 if (!dataSourceExists) {
 echo "Prometheus data source does not exist in Grafana. Creating..."
-sh "curl -X POST -H 'Content-Type: application/json' -d '{\"name\":\"Prometheus1\",\"type\":\"prometheus\",\"url\":\"http://192.168.1.110:9090
+sh "curl -X POST -H 'Content-Type: application/json' -d '{\"name\":\"Prometheus1\",\"type\":\"prometheus\",\"url\":\"http://192.168.1.110:9090 \
 \",\"access\":\"proxy\"}' ${GRAFANA_URL}/api/datasources"
 } else {
 echo "Prometheus data source already exists in Grafana"
