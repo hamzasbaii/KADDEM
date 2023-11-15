@@ -40,13 +40,13 @@ stage('Docker Image ') {
 }
     stage('Docker HUB') {
             steps{
-                sh 'docker login -u hamzasbaii -p Hamza060200'
-                sh 'docker push hamzasbaii/devops-project-2.1'
+                sh ' docker login -u hamzasbaii -p Hamza060200'
+                sh ' docker push hamzasbaii/devops-project-2.1'
         }
 }
    stage('Run Docker Compose') {
 steps {
-echo "Running Docker Compose"
+               echo "Running Docker Compose"
 sh 'docker-compose up -d'
 }
 }
