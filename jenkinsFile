@@ -62,11 +62,10 @@ sh 'docker-compose up -d'
 }
 stage('Monitoring with Prometheus and Grafana') {
 environment {
-GRAFANA_URL = "http://admin:grafana@192.168.1.110:3000
-"
+GRAFANA_URL = "http://admin:grafana@192.168.1.110:3000" \
 }
 steps {
-echo "Monitoring with Prometheus and Grafana"
+echo "Monitoring with Prometheus and Grafana" 
 
 script {
 def dataSourceExists = sh(script: "curl -s -o /dev/null -w '%{http_code}' ${GRAFANA_URL}/api/datasources/name/Prometheus", returnStatus: true) == 200
