@@ -23,6 +23,7 @@ pipeline{
 }
 stage("test JUinit"){
             steps {
+                sh'mvn clean test'
                 sh "mvn test"
             }
         }
