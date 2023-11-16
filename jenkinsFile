@@ -16,11 +16,13 @@ pipeline{
                 echo "Pulling"
             }
         }
-        stage('MVN COMPILE') {
-            steps{
+   stage("Build Artifact") {
+            steps {
+                sh 'mvn clean'
                 sh 'mvn compile'
+                sh 'mvn package -DskipTests'
+            }
         }
-}
    stage('MVN Install') {
             steps {
             sh 'mvn install'
