@@ -80,7 +80,7 @@ echo "Prometheus data source already exists in Grafana"
 }
 
 // Import Grafana dashboard for Spring Boot Actuator metrics (customize the URL)
-sh 'curl -X POST -H "Content-Type: application/json" -d "{\"dashboard\": \"https://grafana.com/api/dashboards/6756/revisions/2/download \
+sh 'curl -X POST -H "Content-Type: application/json" -d "{\"dashboard\": \"https://grafana.com/dashboards/6756/revisions/2/download \
 \",\"inputs\": [{\"name\": \"DS_PROMETHEUS\", \"type\": \"datasource\", \"pluginId\": \"prometheus\", \"value\": \"Prometheus\"}] }"\
 ${GRAFANA_URL}/api/dashboards/import'
 }
