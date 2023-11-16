@@ -15,7 +15,6 @@ services:
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
       SPRING_JPA_SHOW_SQL: "true"
-      SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
       SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQL5Dialect
     networks:
       - my_network
@@ -27,7 +26,6 @@ services:
     environment:
       MYSQL_DATABASE: kaddem
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_PASSWORD:
     ports:
       - "3037:3306"
     networks:
