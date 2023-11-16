@@ -1,11 +1,12 @@
 version: "3.8"
+
 services:
   mysqldb:
     image: mysql:5.7
     restart: unless-stopped
     environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD
-      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_ROOT_PASSWORD
       - MYSQL_DATABASE=devops
     ports:
       - 3306:3306
@@ -13,6 +14,7 @@ services:
       - db:/var/lib/mysql
     networks:
       - NOTwork
+
   backend:
     image: backend
     depends_on:
@@ -32,6 +34,7 @@ services:
       - ./m2:/root/.m2
     networks:
       - NOTwork
+
   frontend:
     image: frontend
     build: ./DevOps_Project_Front
