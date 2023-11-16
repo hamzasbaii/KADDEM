@@ -62,7 +62,7 @@ sh 'docker-compose up -d'
 }
 stage('Monitoring with Prometheus and Grafana') {
 environment {
-GRAFANA_URL = "http://admin:grafana@192.168.1.110:3000" \
+GRAFANA_URL = "http://admin:admin@192.168.1.110:3000" \
 }
 steps {
 echo "Monitoring with Prometheus and Grafana" 
